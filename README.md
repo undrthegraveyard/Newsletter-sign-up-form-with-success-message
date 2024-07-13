@@ -25,10 +25,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-![](./screenshot.jpg)
-![](./screenshot.jpg)
-![](./screenshot.jpg)
+![](./design/Final%20Design%20Desktop%20Preview.png)
+![](./design/Final%20Design%20Desktop%20Preview(Thank%20You%20State).png)
+![](./design/Final%20Design%20Mobile%20Preview(Error%20State).png)
+![](./design/Final%20Design%20Mobile%20Preview.png)
+![](./design/Final%20Design%20Mobile%20Preview(Thank%20You%20State).png)
 
 ### Links
 
