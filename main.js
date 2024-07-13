@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   closeButton.addEventListener("click", () =>{
     successMessage.style.display = "none";
-    mainContainer.style.display = "block";
+    mainContainer.style.display = "grid";
   })
 
   function validateEmail(email) {
