@@ -41,13 +41,13 @@
           </ul>
         </section>
         <section class="signup-form">
-          <form id="newsletter-form" no>
+          <form id="newsletter-form" novalidate>
             <div class="error-state">
               <label for="email">Email address</label>
-              <p class="error-message">Valid email address required</p>
+              <p class="error-message" aria-live="assertive">Valid email address required</p>
             </div>
             <input type="email" id="email" name="email" placeholder="email@company.com" required class="">
-            <button type="submit" id="submit-button" aria-label="Submit email address">Subscribe to monthly newsletter</button>
+            <button type="submit" id="submit-button" aria-label="Submit email address" tabindex="0">Subscribe to monthly newsletter</button>
           </form>
         </section>
         <!-- Sign-up form end -->
@@ -55,12 +55,12 @@
     </main>
   </article>
   <!-- Success message start -->
-  <article id="success-message" class="success-message" aria-live="polite">
+  <article id="success-message" class="success-message" aria-live="polite" tabindex="-1">
     <img src="assets/images/icon-success.svg" alt="Success icon" id="success-icon">
     <h1 class="signup-title">Thanks for subscribing!</h1>
     <p class="signup-description">A confirmation email has been sent to <span id="user-email"></span>. 
       Please open it and click the button inside to confirm your subscription.</p>
-    <button type="button" id="close-button" aria-label="Close success message">Dismiss Message</button>
+    <button type="button" id="close-button" aria-label="Close success message" tabindex="0">Dismiss Message</button>
   </article>
   <!-- Success message end -->
 </body>
