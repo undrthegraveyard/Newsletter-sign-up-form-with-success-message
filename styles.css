@@ -171,7 +171,8 @@ main {
   background-color: var(--color-neutral-white);
   border-radius: 1.5rem;
   padding: 2rem;
-  width: 400px;
+  width: 100%;
+  height: auto;
 }
 .success-message h1 {
   margin-top: 1rem;
