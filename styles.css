@@ -1,0 +1,259 @@
+/* CSS Reset Sheet */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* Global Variables */
+:root {
+  /* Colors */
+  --color-primary-tomato: hsl(4, 100%, 67%);
+  --color-neutral-dark-slate-grey: hsl(234, 29%, 20%);
+  --color-neutral-charcoal-grey: hsl(235, 18%, 26%);
+  --color-neutral-grey: hsl(231, 7%, 60%);
+  --color-neutral-white: hsl(0, 0%, 100%);
+
+  /* Typography */
+  --font-family: 'Roboto', sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-size-body: 16px;
+}
+
+/* Customised Styles */
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-neutral-white);
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  min-height: 100vh;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  border-radius: 0 0 1rem 1rem;
+  overflow: hidden;
+}
+picture {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#hero-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+}
+.signup-title {
+  color: var(--color-neutral-dark-slate-grey);
+  font-size: 2.2rem;
+  line-height: 1;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1rem;
+}
+.signup-description {
+  color: var(--color-neutral-dark-slate-grey);
+  font-size: 1rem;
+  font-weight: var(--font-weight-regular);
+}
+.benefits-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  gap: 0.5rem;
+  padding: 1rem 0;
+}
+.benefit-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.benefit-item img {
+  width: 20px;
+  height: 20px;
+}
+.signup-form {
+  width: 100%;
+  height: auto;
+}
+#newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.error-state {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+.signup-form label {
+  color: var(--color-neutral-dark-slate-grey);
+  font-size: 0.7rem;
+  font-weight: var(--font-weight-bold);
+}
+.error-state p {
+  display: none; /* Initially hidden */
+  color: var(--color-primary-tomato);
+  font-size: 0.7rem;
+  font-weight: var(--font-weight-bold);
+}
+.signup-form input {
+  padding: 1rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 0.5px solid var(--color-neutral-grey);
+  color: var(--color-neutral-grey);
+  font-weight: var(--font-weight-regular);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.signup-form input.error {
+  border: 1px solid var(--color-primary-tomato);
+  background-color: hsla(4, 100%, 67%, 0.3);
+}
+.signup-form input.error::placeholder {
+  color: var(--color-primary-tomato);
+}
+.signup-form input:focus,
+.signup-form input:hover {
+  border: 1px solid var(--color-neutral-dark-slate-grey);
+}
+.signup-form button {
+  padding: 1rem 0.75rem;
+  border-radius: 0.5rem;
+  border: none;
+  color: var(--color-neutral-white);
+  font-weight: var(--font-weight-bold);
+  font-size: 1rem;
+  background-color: var(--color-neutral-dark-slate-grey);
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.signup-form button:hover,
+.signup-form button:focus {
+  background: linear-gradient(-40deg, hsl(4, 100%, 67%), hsl(336, 87%, 65%));
+}
+.success-message {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  background-color: var(--color-neutral-white);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  width: 400px;
+}
+.success-message h1 {
+  margin-top: 1rem;
+}
+.success-message button {
+  padding: 0.75rem 0.75rem;
+  border-radius: 0.5rem;
+  border: none;
+  color: var(--color-neutral-white);
+  font-weight: var(--font-weight-bold);
+  font-size: 1rem;
+  background-color: var(--color-neutral-dark-slate-grey);
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  width: 100%;
+  height: auto;
+  margin: 1rem 0;
+}
+.success-message button:focus,
+.success-message button:hover {
+  background: linear-gradient(-40deg, hsl(4, 100%, 67%), hsl(336, 87%, 65%));
+}
+
+/* Class to hide elements */
+.hidden {
+  display: none;
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 600px) {
+  body {
+    background-color: var(--color-neutral-dark-slate-grey);
+    place-content: center;
+  }
+  .main-container {
+    background-color: var(--color-neutral-white);
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 2rem;
+    place-content: center;
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+  header {
+    border-radius: 1rem;
+    order: 1;
+    flex: 1;
+    min-width: 300px;
+    max-width: 300px;
+  }
+  picture {
+    width: 100%;
+    height: 100%;
+  }
+  #hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  main {
+    padding: 0rem 1rem;
+    flex: 1;
+    place-content: center;
+  }
+  .signup-title {
+    font-size: 3rem;
+  }
+  .benefit-item img {
+    width: 20px;
+    height: 20px;
+  }
+  .signup-form {
+    gap: 1.5rem;
+  }
+  .signup-form label {
+    font-size: 0.9rem;
+  }
+  .signup-form input {
+    font-size: 1rem;
+  }
+  .signup-form button {
+    font-size: 1rem;
+  }
+}
